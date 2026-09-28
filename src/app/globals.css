@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translateY(-14px) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.pop {
+    animation: pop 0.3s ease-out;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
