@@ -79,12 +79,13 @@ function Monitor({ cx, y }: { cx: number; y: number }) {
 }
 
 function Lamp({ x, y }: { x: number; y: number }) {
-    const d = x > 400 ? 1 : -1; // arah kepala lampu
+    const d = x > 400 ? -1 : 1; // kepala lampu menghadap ke tengah meja
     return (
         <g className="pop">
+            <ellipse cx={x + 40 * d} cy={y - 70} rx="70" ry="55" fill="url(#glow)" />
             <rect x={x - 14} y={y - 6} width="28" height="6" rx="3" fill="#374151" />
             <path
-                d={`M ${x} ${y - 6} L ${x - 8 * d} ${y - 58} L ${x + 34 * d} ${y - 78}`}
+                d={`M ${x} ${y - 6} L ${x - 8 * d} ${y - 80} L ${x + 30 * d} ${y - 122}`}
                 stroke="#374151"
                 strokeWidth="4"
                 fill="none"
@@ -92,10 +93,9 @@ function Lamp({ x, y }: { x: number; y: number }) {
                 strokeLinejoin="round"
             />
             <path
-                d={`M ${x + 22 * d} ${y - 88} L ${x + 50 * d} ${y - 80} L ${x + 40 * d} ${y - 62} Z`}
+                d={`M ${x + 20 * d} ${y - 132} L ${x + 50 * d} ${y - 120} L ${x + 38 * d} ${y - 102} Z`}
                 fill="#fbbf24"
             />
-            <ellipse cx={x + 45 * d} cy={y - 30} rx="75" ry="58" fill="url(#glow)" />
         </g>
     );
 }
@@ -138,7 +138,7 @@ export default function WorkspacePreview({ workspace }: { workspace: Workspace }
     const coffees = accessories["coffee-machine"] ?? 0;
 
     const monitorX = (i: number) => (monitors === 1 ? 400 : 330 + i * 140);
-    const lampX = [580, 220];
+    const lampX = [250, 550];
     const plantX = [125, 55];
     const coffeeX = [655, 715];
 
