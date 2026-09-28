@@ -22,9 +22,21 @@ export default function Home() {
     }));
 
   return (
-    <main className="mx-auto grid max-w-6xl gap-6 p-4 sm:p-8 lg:grid-cols-[1fr_380px] lg:gap-8">
-      {/* Preview: placeholder dulu */}
-      <div className="sticky top-0 z-10 self-start overflow-hidden rounded-2xl border border-neutral-200 bg-white lg:top-8">
+    <main className="mx-auto grid max-w-6xl gap-6 p-4 sm:p-8 lg:grid-cols-[1fr_400px] lg:gap-x-10">
+      <header className="lg:col-span-2">
+        <p className="text-sm font-medium uppercase tracking-widest text-clay">
+          Rent your setup
+        </p>
+        <h1 className="mt-2 font-display text-4xl sm:text-5xl">
+          Design your workspace
+        </h1>
+        <p className="mt-3 max-w-xl text-bark/70">
+          Pick a desk, a chair and a few extras. Watch it come together, then
+          rent it for as long as you need.
+        </p>
+      </header>
+
+      <div className="sticky top-0 z-10 self-start overflow-hidden rounded-3xl border border-line bg-cream shadow-sm lg:top-8">
         <WorkspacePreview workspace={workspace} />
       </div>
 

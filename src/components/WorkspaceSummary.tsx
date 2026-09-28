@@ -27,10 +27,11 @@ export default function WorkspaceSummary({ workspace }: { workspace: Workspace }
 
     if (rented) {
         return (
-            <section className="rounded-2xl bg-black p-6 text-white">
-                <h2 className="text-xl font-semibold">Setup requested 🎉</h2>
-                <p className="mt-2 text-sm text-neutral-300">
-                    Your workspace ({items.length} items, ${total}/mo) is on its way.
+            <section className="rounded-3xl bg-leaf p-6 text-cream">
+                <h2 className="font-display text-2xl">Your setup is on its way 🌿</h2>
+                <p className="mt-2 text-sm text-cream/80">
+                    {items.length} items, ${total}/mo. We'll have everything ready when
+                    you land.
                 </p>
                 <button
                     onClick={() => setRented(false)}
@@ -43,34 +44,32 @@ export default function WorkspaceSummary({ workspace }: { workspace: Workspace }
     }
 
     return (
-        <section className="rounded-2xl border border-neutral-200 p-6">
-            <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-neutral-500">
-                Your setup
-            </h2>
+        <section className="rounded-3xl border border-line bg-white p-6 shadow-sm">
+            <h2 className="mb-4 font-display text-xl">Your setup</h2>
 
             <ul className="grid gap-2 text-sm">
                 {items.map((i) => (
                     <li key={i.id} className="flex justify-between">
                         <span>
                             {i.name}
-                            {i.qty > 1 && <span className="text-neutral-500"> × {i.qty}</span>}
+                            {i.qty > 1 && <span className="text-bark/50"> × {i.qty}</span>}
                         </span>
-                        <span>${i.price * i.qty}</span>
+                        <span className="tabular-nums">${i.price * i.qty}</span>
                     </li>
                 ))}
             </ul>
 
-            <div className="mt-4 flex items-baseline justify-between border-t pt-4">
+            <div className="mt-4 flex items-baseline justify-between border-t border-line pt-4">
                 <span className="font-medium">Total</span>
-                <span className="text-2xl font-semibold">
+                <span className="font-display text-3xl tabular-nums">
                     ${total}
-                    <span className="text-sm font-normal text-neutral-500">/mo</span>
+                    <span className="font-sans text-sm text-bark/50">/mo</span>
                 </span>
             </div>
 
             <button
                 onClick={() => setRented(true)}
-                className="mt-5 w-full rounded-xl bg-black py-3 font-medium text-white transition hover:bg-neutral-800 active:scale-[0.98]"
+                className="mt-5 w-full rounded-xl bg-clay py-3 font-medium text-white transition hover:bg-clay-dark active:scale-[0.98]"
             >
                 Rent this workspace →
             </button>
