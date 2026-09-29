@@ -24,7 +24,7 @@ An interactive workspace designer: pick a desk, choose a chair, add accessories,
 
 I treated it as a product for a freelancer who just landed in Bali and wants a workspace ready by next week, so I prioritised the interaction (choose, see, rent) over a wide catalog, and gave the UI a warm, relaxed look to match the audience. I skipped the extra sketch categories (coffee station, outdoor gear, relax zone, garage) to make sure the core flow was solid and polished first.
 
-I used an AI assistant (Claude) as a coding partner, as the challenge allows. [Describe what you decided yourself, e.g. product direction, choosing hand-made SVG over site images, the warm visual direction, scope and priorities.]
+I used an AI assistant (Claude) as a coding partner, as the challenge allows — it wrote code that I reviewed, tested and adjusted at each step rather than generating the whole app at once. Decisions I made myself: the single-page layout instead of a wizard, using hand-drawn SVG for the preview instead of images from the monis.rent site (so it's lightweight and easy to restyle), the warm cream/terracotta/leaf palette suited to a Bali-based audience, and product/scope priorities like capping accessories at 2 per item and cutting the extra sketch categories to protect the core interaction.
 
 ## What I'd improve with more time
 
